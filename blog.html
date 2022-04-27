@@ -1,0 +1,1320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="icon/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="Script/bootstrap.js"></script>
+
+    <!-- MY CSS  & JAVASCRIPT FIles -->
+    <style>
+        /* <<<<<<-------FONTS ------->>>>*/
+        @font-face {
+            font-family: 'afterglow';
+            src: url('Font/Afterglow.ttf');
+            src: local('☺'), url('Font/Afterglow.ttf') format('truetype');
+        }
+
+        @font-face {
+            font-family: 'Regensbur';
+            src: url('Font/Regensburg.ttf');
+        }
+
+        @font-face {
+            font-family: 'Homework';
+            src: url('Font/Homework.ttf');
+        }
+
+        @font-face {
+            font-family: 'Oswald';
+            src: url('Font/Oswald.ttf');
+        }
+
+        @font-face {
+            font-family: 'ironman';
+            src: url('Font/IronMan.ttf');
+        }
+
+        @font-face {
+            font-family: 'Lemon';
+            src: url('Font/LEMONMILK.otf');
+        }
+
+        @font-face {
+            font-family: 'ar';
+            src: url('Font/ar.ttf');
+        }
+
+        @font-face {
+            font-family: 'sans';
+            src: url('Font/QuattrocentoSans-Regular.eot');
+            src: local('☺'), url('Font/QuattrocentoSans-Regular.woff') format('woff'), url('Font/QuattrocentoSans-Regular.ttf') format('truetype'), url('Font/QuattrocentoSans-Regular.svg') format('svg');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        /* CSS START HERE */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: #211917 url(Image/bg-body.png) repeat-y center top;
+        }
+
+        .Outer {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(Image/bedroom.jpg);
+            width: 100%;
+            height: 100vh;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .NavBar {
+            font-family: "Oswald";
+            font-size: 17px;
+            text-transform: uppercase;
+            margin: 0px 10px 0px;
+        }
+
+        .navbar-toggler:hover {
+            background-color: rgb(206, 27, 27);
+
+        }
+
+        .navbar-light .navbar-nav .nav-link {
+            color: white;
+            /* padding: 15px; */
+            margin: 20px 10px 10px;
+        }
+
+        .navbar-light .navbar-nav .nav-link:hover {
+            color: #ffc947;
+        }
+
+        .navbar-light .navbar-nav .nav-link:hover,
+        .selected {
+            color: #ffc947;
+
+        }
+
+        #navbar-brand {
+            width: 50px;
+            height: 50px;
+            /* float: right; */
+            animation: heartbeat 1s linear infinite;
+        }
+
+        @keyframes heartbeat {
+
+            0% {
+                transform: scale(1);
+
+            }
+
+            25% {
+                transform: scale(1.1);
+
+            }
+
+            50% {
+                transform: scale(1.5);
+            }
+
+            75% {
+                transform: scale(1.2);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .mainContentOuter {
+            background-image: url("Image/bg-body.png");
+            width: auto;
+        }
+
+        .mainContentInner {
+            background-image: url("Image/bg-pattern.jpg");
+            background-size: cover;
+            width: auto;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            float: right;
+        }
+
+
+        main {
+            width: 100%;
+            height: 70vh;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            color: aliceblue;
+
+        }
+
+        section h1 {
+            font-size: 55px;
+            font-weight: 700;
+            font-family: "Lemon";
+            text-shadow: 6px 6px 4px black;
+        }
+
+        section .ar {
+            font-size: 35px;
+            font-weight: 700;
+            font-family: "ar";
+            text-shadow: 6px 6px 4px black;
+            animation: animate 3s linear infinite;
+        }
+
+        @keyframes animate {
+            0% {
+                color: tomato;
+            }
+
+            50% {
+                color: gold;
+            }
+
+            100% {
+                color: blue;
+            }
+        }
+
+        section h3 {
+            font-size: 35px;
+            font-weight: 200;
+            font-family: "Lemon";
+            text-shadow: 2px 2px 4px black;
+        }
+
+        section a {
+            padding: 12px 30px;
+            border-radius: 4px;
+            outline: none;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            margin: 10px;
+        }
+
+        .change::after {
+            content: '';
+            animation: animates 10s linear infinite;
+            color: #ffc947;
+        }
+
+        @keyframes animates {
+            0% {
+                content: " STORE";
+            }
+
+            100% {
+                content: " thank you";
+            }
+        }
+
+        /*<<<<--------- CONTENT-------->>>>> */
+        #content1 {
+            background: url(Image/bg-contents.png) repeat-y;
+            background-position: -961px top;
+            width: 970px;
+            margin: 0 auto;
+        }
+
+        #content1>div {
+            background-position: -1931px bottom;
+            width: 960px;
+            padding: 0 5px 10px;
+        }
+        #content1 #blog1 {
+    width: 890px;
+    padding: 10px 10px 10px;
+}
+#content1 div.body1 {
+    background-position: 1px top;
+    display: inline-block;
+    width: 940px;
+    padding: 10px 10px 0;
+}#blog1 #sidebar1 {
+    background: url(Image/separator-light-vertical.png) repeat-y left top;
+    min-height: 409px;
+    width: 240px;
+    margin-left: 24px;
+    padding: 15px;
+    float: right;
+}
+
+#sidebar1 div{
+    background: url(Image/separator-light.png) repeat-x left top;
+}
+#blog1 #sidebar1 > div:first-child {
+    background: none;
+    margin: 0;
+    padding-top: 0;
+}
+#blog1 #main1 {
+    height: 525px;
+    width: 525px;
+    position: relative;
+}
+#main1 {
+    width: 448px;
+}
+#blog1 div.viewer1 {
+    background: url(Image/separator-light.png) repeat-x left bottom;
+    margin: 10px 0px 0px;
+    padding: 0 0 24px;
+}#blog1 #main1 span.time1 {
+    font-size: 14px;
+    line-height: 20px;
+    margin: 3px 5px 0 0;
+}
+.time1 {
+    float: left;
+    background: url(Image/bg-time.png) no-repeat left top;
+    color: #fff;
+    font-family: "Oswald";
+    display: block;
+    height: 42px;
+    width: 42px;
+    margin: 0 5px 15px 0;
+    padding: 0 5px;
+    text-align: center;
+    text-transform: uppercase;
+}
+#blog1 #main1 h3 {
+    font-family: "Oswald";
+    font-weight: normal;
+    line-height: 20px;
+    margin: 0;
+    text-transform: uppercase;
+}
+#blog1 #main1 h3 a {
+    color: #000;
+    font-size: 19px;
+    text-decoration: none;
+}
+#blog1 .info1 {
+    color: #626161;
+    font-size: 12px;
+    line-height: 24px;
+    padding: 0 0 6px;
+    text-transform: uppercase;
+}
+#content1 p {
+    color: #626161;
+    font-size: 14px;
+    line-height: 24px;
+    margin: 0px;
+    padding: 0 0 50px;
+    text-align: justify;
+    
+}
+ #blog1 .info1 a {
+    text-decoration: none;
+}
+#content1 p a {
+    color: #554f4f;
+}
+
+#blog1 #main1 div.frame1 {
+    background-position: 0 -269px;
+    height: 262px;
+    width: 560px;
+    /* margin: 0 0 18px -40px; */
+    /* padding: 1px 20px 1px 41px; */
+    
+}
+#blog1 .more1 {
+    float: right;
+}
+#blog1 .more1, #blog1 .comments {
+    color: #241b18;
+    font: 12px/24px "Oswald";
+    text-decoration: none;
+    text-transform: uppercase;
+}
+#blog1 .comments {
+    background-position: 0 -45px;
+    padding-left: 20px;
+}
+/*<<<<<<--------------------Footer------------------------>>>>>> */
+
+
+        .footer-dark {
+            background-color: #e2b241;
+        }
+
+        .row.lineBreak {
+            background: url(Image/separator-dark.png) repeat-x left bottom;
+        }
+
+        .footer-dark .container .row>div:nth-of-type(1n+2) {
+            background: url(Image/separator-dark-vertical.png) repeat-y left;
+        }
+
+
+        .footer-dark h3 {
+            margin-top: 0;
+            text-align: center;
+            margin-bottom: 12px;
+            font-weight: bold;
+            padding: 5px;
+            font-size: 16px;
+        }
+
+        .footer-dark ul {
+            padding: 0;
+            list-style: none;
+            line-height: 1.6;
+            font-size: 14px;
+            margin-bottom: 0;
+        }
+
+        .footer-dark ul a {
+            color: inherit;
+            text-decoration: none;
+            font-weight: bolder;
+        }
+
+        .footer-dark ul a:hover {
+            color: blue;
+        }
+
+        #footer-email {
+
+            text-decoration: none;
+        }
+
+        .m {
+            line-height: 1.5;
+            font-family: "afterglow";
+            margin-left: 40px;
+        }
+
+        #copyright {
+            color: black;
+            font-family: "Oswald";
+            margin-bottom: 0;
+        }
+
+        /** Navigation **/
+        #navigation {
+            display: inline-block;
+            float: right;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        #navigation li {
+            float: left;
+            margin: 0 15px;
+        }
+
+        #navigation li:first-child {
+            margin-left: 0;
+        }
+
+        #navigation li a {
+            color: rgb(10, 10, 10);
+            font-family: "Oswald";
+            font-size: 14px;
+            padding: 15px 0;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+
+        #navigation li a:hover,
+        #navigation li.selected a {
+            color: blue;
+        }
+
+        span.time {
+            background: url(Image/bg-time.png) left top;
+            background-repeat: no-repeat;
+            float: left;
+            color: #fff;
+            font-family: "Oswald";
+            display: block;
+            height: 43px;
+            width: 42px;
+            margin: 0 5px 15px 0;
+            padding: 0 5px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        .posts {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .posts li {
+            display: inline-block;
+            font-size: 13px;
+        }
+
+        .posts p {
+            color: #4b3a33;
+            padding-left: 50px;
+        }
+
+        .posts p b {
+            display: block;
+            font-family: "Oswald";
+            font-weight: normal;
+            margin: 0 0 3px;
+        }
+
+        .posts p a {
+            color: #4b3a33;
+            display: block;
+            font-family: "Oswald";
+            text-decoration: none;
+        }
+
+        .posts p a:hover {
+            color: #241b18;
+        }
+
+        .btn2 {
+            background: url(Image/buttons.png) no-repeat;
+            cursor: pointer;
+            font: 14px/24px "Oswald";
+            text-decoration: none;
+            text-transform: uppercase;
+            background-position: -13px -39px;
+            font-size: 11px;
+            height: 26px;
+            width: 83px;
+            border: 0;
+            margin: 10px;
+            margin-bottom: 50px;
+            color: #fff;
+        }
+
+        .btn2:hover {
+            background-position: -127px -39px;
+        }
+
+        #newsletter {
+            text-align: center;
+        }
+
+        #newsletter input[type="text"] {
+            color: #4b3a33;
+            height: 26px;
+            line-height: 26px;
+            width: 269px;
+            border: 3px solid #af8112;
+            margin: 0 0 6px;
+            padding: 0 4px;
+            /* *margin-left: -6px; */
+        }
+
+        #connect a
+      {
+            background: url(Image/icons.png) no-repeat;
+        }
+
+        #connect {
+            background: url(Image/separator-dark-vertical.png) repeat-x left top;
+            text-align: center;
+        }
+
+        #connect a {
+            display: inline-block;
+            height: 33px;
+            margin: 20px 10px;
+        }
+
+        #connect a.facebook {
+            background-position: -46px -112px;
+            width: 33px;
+        }
+
+        #connect a.googleplus {
+            background-position: -46px -153px;
+            width: 34px;
+        }
+
+        #connect a.twitter {
+            background-position: -46px -194px;
+            width: 40px;
+        }
+
+        #connect a.facebook:hover {
+            background-position: 0 -112px;
+        }
+
+        #connect a.googleplus:hover {
+            background-position: 0 -153px;
+        }
+
+        #connect a.twitter:hover {
+            background-position: 0 -194px;
+        }
+
+                             /* <<<<<--------------------MEDIA QUERY------------------>>>>>>> */
+        @media (min-width:320px) and (max-width:425px) {
+            .Outer {
+                background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(Image/bedroom.jpg);
+                width: 100%;
+                height: 95vh;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+
+            /* <<<<<<<<------------------NAVBAARRRRRRR-------->>>>>>>>>> */
+            .NavBar {
+                font-family: "Oswald";
+                font-size: 15px;
+                text-transform: uppercase;
+                margin: 5px 5px 0px;
+            }
+
+            .navbar-light .navbar-nav .nav-link {
+                color: white;
+                margin: 0px 2px;
+            }
+
+            #navbar-brand {
+                width: 30px;
+                height: 30px;
+                animation: heartbeat 1s linear infinite;
+            }
+
+            /* NAVBAARR CENTER MATERIAL */
+            main {
+                width: 100%;
+                height: 75vh;
+                align-items: center;
+                display: flex;
+                justify-content: center;
+                text-align: center;
+                color: aliceblue;
+
+            }
+
+            section h1 {
+                font-size: 35px;
+                font-weight: 700;
+                font-family: "Lemon";
+                text-shadow: 6px 6px 4px black;
+            }
+
+            section .ar {
+                font-size: 30px;
+                font-weight: 700;
+                font-family: "ar";
+                display: block;
+                line-height: 1.7;
+                text-shadow: 6px 6px 4px black;
+                animation: animate 3s linear infinite;
+            }
+
+            section h3 {
+                font-size: 25px;
+                font-weight: 200;
+                font-family: "Lemon";
+                text-shadow: 2px 2px 4px black;
+            }
+
+            section a.two {
+                padding: 7px 15px;
+                /* border-radius: 4px; */
+                outline: none;
+                text-decoration: none;
+                text-transform: uppercase;
+                font-size: 10px;
+                font-weight: 500;
+                letter-spacing: 1px;
+                margin: 10px;
+            }
+
+            /*<<<<<<--------------------Footer------------------------>>>>>> */
+
+
+            .footer-dark {
+                background-color: #e2b241;
+            }
+
+            .footer-dark .container .row>div:nth-of-type(1n+2) {
+                background: url(Image/separator-dark-vertical.png) repeat-x left top;
+            }
+
+
+            .footer-dark h3 {
+                margin-top: 0;
+                text-align: center;
+                margin-bottom: 12px;
+                font-weight: bold;
+                padding: 5px;
+                font-size: 13px;
+            }
+
+            .footer-dark ul {
+                padding: 0;
+                list-style: none;
+                line-height: 1.3;
+                font-size: 14px;
+                margin-bottom: 0;
+            }
+
+            .footer-dark ul a {
+                color: inherit;
+                text-decoration: none;
+                font-weight: bolder;
+            }
+
+
+            .m {
+                line-height: 1.5;
+                text-align: center;
+                font-family: "afterglow";
+                font-size: 15px;
+
+            }
+
+            .m img {
+                width: 200px;
+            }
+
+            #copyright {
+                color: rgb(134, 23, 23);
+                font-family: "Oswald";
+                /* display: block; */
+                font-size: 15px;
+                font-weight: 500;
+                text-align: center;
+            }
+
+            /** Navigation **/
+            #navigation {
+                background: url(Image/separator-dark-vertical.png) repeat-x left bottom;
+                display: none;
+                float: right;
+                list-style: none;
+                margin: 0;
+                padding: 0;
+            }
+
+            #navigation li {
+                float: left;
+                margin: 0 7px;
+            }
+
+            #navigation li a {
+                color: rgb(10, 10, 10);
+                font-family: "Oswald";
+                font-size: 15px;
+                padding: 1px 0;
+                text-decoration: none;
+                text-transform: uppercase;
+            }
+
+            #navigation li a:hover,
+            #navigation li.selected a {
+                color: blue;
+            }
+
+            span.time {
+                background: url(Image/bg-time.png) left top;
+                background-repeat: no-repeat;
+                float: left;
+                color: #fff;
+                font-family: "Oswald";
+                display: block;
+                height: 40px;
+                width: 40px;
+                margin: 0 5px 16px 0;
+                padding: 0 5px;
+                text-align: center;
+                text-transform: uppercase;
+            }
+
+            .posts {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+            }
+
+            .posts li {
+                display: inline-block;
+                font-size: 14px;
+            }
+
+            .posts p {
+                color: #4b3a33;
+                padding-left: 50px;
+            }
+
+            .posts p b {
+                display: block;
+                font-family: "Oswald";
+                font-weight: normal;
+                margin: 0 0 3px;
+            }
+
+            .posts p a {
+                color: #4b3a33;
+                display: block;
+                font-family: "Oswald";
+                text-decoration: none;
+            }
+
+            .posts p a:hover {
+                color: #241b18;
+            }
+
+            .btn2 {
+                background: url(Image/buttons.png) no-repeat;
+
+                cursor: pointer;
+                font: 14px/24px "Oswald";
+                text-decoration: none;
+                text-transform: uppercase;
+                background-position: -13px -39px;
+                font-size: 11px;
+                height: 26px;
+                width: 83px;
+                border: 0;
+                margin: 10px;
+                /* margin-bottom: 50px; */
+                color: #fff;
+            }
+
+            .btn2:hover {
+                background-position: -127px -39px;
+            }
+
+            #newsletter {
+                text-align: center;
+            }
+
+            #newsletter input[type="text"] {
+                color: #4b3a33;
+                height: 26px;
+                line-height: 26px;
+                width: 269px;
+                border: 3px solid #af8112;
+                margin: 0px 0 6px;
+                padding: 0 4px;
+            }
+
+            #connect a,
+            #pagination .previous,
+            #pagination .next,
+            #blog .comments {
+                background: url(Image/icons.png) no-repeat;
+            }
+
+            #connect {
+                background: url(Image/separator-dark-vertical.png) repeat-x left top;
+                text-align: center;
+
+            }
+
+            #connect a {
+                display: inline-block;
+                height: 33px;
+                margin: 10px 10px 10px;
+            }
+        }
+
+        /*<<<<<<<<<<<_____----------- MEDIA QUERY-----2------------>>>>>>>>>> */
+        @media (min-width:426px) and (max-width:768px) {
+
+            /* NAVBAARRR */
+            .NavBar {
+                font-family: "Oswald";
+                font-size: 15px;
+                text-transform: uppercase;
+                margin: 5px 0px 0px;
+            }
+
+            .navbar-light .navbar-nav .nav-link {
+                color: #fff;
+                margin: 10px 5px;
+            }
+
+            #navbar-brand {
+                width: 45px;
+                height: 45px;
+                animation: heartbeat 1s linear infinite;
+            }
+
+            main {
+                width: 100%;
+                height: 70vh;
+                align-items: center;
+                display: flex;
+                justify-content: center;
+                text-align: center;
+                color: aliceblue;
+
+            }
+
+            section h1 {
+                font-size: 35px;
+                font-weight: 700;
+                font-family: "Lemon";
+                text-shadow: 6px 6px 4px black;
+            }
+
+            section .ar {
+                font-size: 28px;
+                font-weight: 700;
+                font-family: "ar";
+                text-shadow: 6px 6px 4px black;
+                animation: animate 3s linear infinite;
+            }
+
+            section h3 {
+                font-size: 28px;
+                font-weight: 200;
+                font-family: "Lemon";
+                text-shadow: 2px 2px 4px black;
+                margin-bottom: 10px;
+            }
+
+            section a.two {
+                padding: 10px 15px;
+                border-radius: 4px;
+                outline: none;
+                text-decoration: none;
+                text-transform: uppercase;
+                font-size: 13px;
+                font-weight: 500;
+                letter-spacing: 1px;
+                margin: 10px;
+            }
+
+
+
+
+            /*<<<<<<--------------------Footer------------------------>>>>>> */
+            .footer-dark {
+                background-color: #e2b241;
+
+            }
+
+            .row.lineBreak {
+                background: url(Image/separator-dark.png) repeat-x left bottom;
+            }
+
+            .footer-dark .container .row>div:nth-of-type(1n+2) {
+                background: url(Image/separator-dark-vertical.png) repeat-x left top;
+            }
+
+            .footer-dark h3 {
+                margin-top: 0;
+                text-align: center;
+                margin-bottom: 12px;
+                font-weight: bold;
+                padding: 5px;
+                font-size: 14px;
+
+            }
+
+            .footer-dark ul {
+                padding: 0;
+                list-style: none;
+                line-height: 1.6;
+                font-size: 10px;
+                margin-bottom: 0;
+            }
+
+            .footer-dark ul a {
+                color: inherit;
+                text-decoration: none;
+                font-weight: bolder;
+            }
+
+            .footer-dark ul a:hover {
+                color: blue;
+            }
+
+            #footer-email {
+
+                text-decoration: none;
+            }
+
+            .m {
+                /* text-align: center; */
+                line-height: 1.5;
+                font-family: "afterglow";
+                margin-left: 40px;
+            }
+
+            .m img {
+                width: 250px;
+            }
+
+            p #copyright {
+                color: rgb(231, 46, 46);
+                font-family: "Oswald";
+                display: inline;
+                font-size: 10px;
+                font-weight: 700;
+
+            }
+
+            /** Navigation **/
+            #navigation {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+            }
+
+            #navigation li {
+                float: left;
+                margin: 0 4px;
+
+            }
+
+            #navigation li a {
+                color: rgb(10, 10, 10);
+                font-family: "Oswald";
+                font-size: 13px;
+                padding: 1px 0;
+                text-decoration: none;
+                text-transform: uppercase;
+            }
+
+            span.time {
+                background: url(Image/bg-time.png) left top;
+                background-repeat: no-repeat;
+                float: left;
+                color: #fff;
+                font-family: "Oswald";
+                display: block;
+                height: 43px;
+                width: 42px;
+                margin: 0 5px 15px 0;
+                padding: 0 5px;
+                text-align: center;
+                text-transform: uppercase;
+
+            }
+
+            .posts {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+            }
+
+            .posts li {
+                display: inline-block;
+                font-size: 12px;
+            }
+
+            .posts p {
+                color: #0f0f0f;
+                padding-left: 50px;
+            }
+
+            .posts p b {
+                display: block;
+                font-family: "Oswald";
+                font-weight: normal;
+                margin: 0 0 3px;
+            }
+
+            .posts p a {
+                color: #131212;
+                display: block;
+                font-family: "Oswald";
+                text-decoration: none;
+            }
+
+            .posts p a:hover {
+                color: #241b18;
+            }
+
+            .btn2 {
+                background: url(Image/buttons.png) no-repeat;
+                cursor: pointer;
+                font: 14px/24px "Oswald";
+                text-decoration: none;
+                text-transform: uppercase;
+                background-position: -13px -39px;
+                font-size: 11px;
+                height: 26px;
+                width: 83px;
+                border: 0;
+                margin: 10px;
+                margin-bottom: 50px;
+                color: #fff;
+            }
+
+            .btn2:hover {
+                background-position: -127px -39px;
+            }
+
+            #newsletter input[type="text"] {
+                color: #4b3a33;
+                height: 26px;
+                line-height: 26px;
+                width: 269px;
+                border: 3px solid #af8112;
+                margin: 0 0 6px;
+                padding: 0 4px;
+            }
+
+            #connect a,
+            #pagination .previous,
+            #pagination .next,
+            #blog .comments {
+                background: url(Image/icons.png) no-repeat;
+            }
+
+            #connect a {
+                /* display: inline-block; */
+                height: 33px;
+                margin: 10px 10px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid Outer">
+        <div class=" row">
+            <div class=" col-md-12 col-sm-12">
+                <nav class="navbar  NavBar navbar-expand  navbar-light">
+                    <a class="navbar-brand" href="#"><img src="Image/sr.png" id="navbar-brand" alt=""></a>
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0  navItem">
+                        <li class="nav-item">
+                            <a class="nav-link active text-primary " href="About.html"> <i class=" bi bi-house"></i>
+                                Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="About.html"><i class="bi bi-shop"></i> STORE</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="#"><i class="bi bi-person"></i> About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="#"><i class="bi bi-phone"></i> Blog</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <main>
+                <section>
+                    <h3>Welcome To <span class="ar">AR</span> Furniture</h3>
+                    <h1>COME & VISIT<span class="change"></span></h1>
+                    <form action="" class="form-froup">
+                        <a href="#" class="btn btn-primary two">Login</a>
+                        <a href="#" class="btn btn-success two">sign up</a>
+                    </form>
+                </section>
+            </main>
+        </div>
+    </div>
+    <!-- CONTENT -->
+    <div class="containe" id="content1">
+        <div>
+            <div class="body1" id="blog1">
+                <div id="sidebar1">
+                    <div>
+                        <h5>Featured Blogs</h5>
+                        <ul class="post1">
+                            <li>
+                                <span class="time1">Apr 16</span>
+                                <p>
+                                    <a href="#">Tips On Arranging Furniture</a> This website template has been
+                                    designed by R Maurya for you, for free.
+                                </p>
+                            </li>
+                            <li>
+                                <span class="time1">Apr 15</span>
+                                <p>
+                                    <a href="#">How To Maintain Wooden Furniture</a> And we love the challenge of
+                                    doing something diferent and something special.
+                                </p>
+                            </li>
+                            <li>
+                                <span class="time1">Apr 16</span>
+                                <p>
+                                    <a href="#">The Newest Innovation On Wooden</a> You can replace all this text
+                                    with your own text. What’s more, they’re absolutely free!
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h5>Blog Categories</h5>
+                        <ul>
+                            <li>
+                                <a href="#">Carved Creations</a>
+                            </li>
+                            <li>
+                                <a href="#">Furniture</a>
+                            </li>
+                            <li>
+                                <a href="#">Maintenance and Cleaning</a>
+                            </li>
+                            <li>
+                                <a href="#">Innovations</a>
+                            </li>
+                            <li>
+                                <a href="#">Modern And New</a>
+                            </li>
+                            <li>
+                                <a href="#">Classic and Timeless</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h5>Archives</h5>
+                        <ul>
+                            <li>
+                                <a href="#">March 2021</a>
+                            </li>
+                            <li>
+                                <a href="#">February 2021</a>
+                            </li>
+                            <li>
+                                <a href="#">January 2021</a>
+                            </li>
+                            <li>
+                                <a href="#">December 2021</a>
+                            </li>
+                            <li>
+                                <a href="#">November 2021</a>
+                            </li>
+                            <li>
+                                <a href="#">October 2021</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="main1">
+                    <div class="viewer1">
+                        <span class="time1">Apr 16</span>
+                        <h3><a href="#">CC's Carving Master and Founder</a></h3>
+                        <p class="info1">
+                            Posted By: <a href="#">Admin</a> in <a href="blog.html">Production</a>, <a
+                                href="index.html">Carved Creations</a>
+                        </p>
+                        <div class="frame1">
+                            <img src="Image/carving-master.jpg" alt="Img" class="img-fluid">
+                        </div>
+                        <p>
+                            This website template has been designed by <a href="http://www.woodworkingwebsite.com/">Rohan
+                                Maurya</a> for you, for free. You can replace all this text with your own text. You can
+                            remove any link to our website from this website template, you're free to use this website
+                            template without linking back to us. If you're having problems editing this website
+                            template, then don't hesitate to ask for help on the <a
+                                href="http://www.woodworkingwebsite.com/forums/">Forum</a>.
+                        </p>
+                        <a href="#" class="more1">Read More</a> <a href="blog.html" class="comments">0
+                            Comments</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--<<<<<<<<<<<<<<---------- footer -->
+    <div class="footer-dark dark1">
+        <footer>
+            <div class="container">
+                <div class="row lineBreak">
+                    <div class="col-md-4 item text">
+                        <div class="m">
+                            <h3>&#9733;-VISIT OUR SHOWROOM-&#9733;</h3>
+                            <a href="#"><img src="Image/show-room.png" class="img-fluid" alt="Img"></a><br>
+                            <b>Address:-</b><b>AR Furniture Muhammadalla <br> Azamgarh Uttar
+                                Pradesh<br> PinCode:-276001</b><br>
+                            <b>Email Us:-</b><a href="#" id="footer-email">rm0349019@gmail.com</a><br>
+                            <b>Mobile No.:-9170618798</b>
+                        </div>
+                    </div>
+                    <div class=" col-md-4 item ">
+                        <h3>&#9733;-Recent Blog Posts-&#9733;</h3>
+                        <ul class="posts">
+                            <li>
+                                <span class="time">Apr 16</span>
+                                <p>
+                                    <a href="#">The Carving Master &amp; Owner</a> Maybe you’re looking for something
+                                    diferent, something special.
+                                </p>
+                            </li>
+                            <li>
+                                <span class="time">Apr 15</span>
+                                <p>
+                                    <a href="#">5 Star Hotels We Supply</a> And we love the challenge of doing something
+                                    diferent and something special.
+                                </p>
+                            </li>
+                            <li>
+                                <span class="time">Apr 14</span>
+                                <p>
+                                    <a href="#">How To Pick The Right Furniture For You</a> What’s more, they’re
+                                    absolutely free! You can do a lot with them.
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class=" col-md-4 item">
+                        <h3> &nbsp;&#9733;-Join Our Newsletter-&#9733;</h3>
+                        <form action="#" method="post" id="newsletter">
+                            <input type="text" value="Enter Email Address Here For Updates"
+                                onBlur="javascript:if(this.value==''){this.value=this.defaultValue;}"
+                                onFocus="javascript:if(this.value==this.defaultValue){this.value='';}">
+                            <input type="submit" value="Sign up" class="btn2" />
+                        </form>
+                        <div id="connect">
+                            <h3> &nbsp;&#9733;-Social Media-&#9733;</h3>
+                            <a href="http://woodworkingwebsite.com/go/facebook/" target="_blank" class="facebook"></a>
+                            <a href="http://woodworkingwebsite.com/go/googleplus/" target="_blank"
+                                class="googleplus"></a> <a href="http://woodworkingwebsite.com/go/twitter/"
+                                target="_blank" class="twitter"></a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <ul id="navigation">
+                    <li>
+                        <a href="i#">Home</a>
+                    </li>
+                    <li>
+                        <a href="a#">About</a>
+                    </li>
+                    <li>
+                        <a href="gal#">Gallery</a>
+                    </li>
+                    <li>
+                        <a href="#">Blog</a>
+                    </li>
+                    <li>
+                        <a href="con#">Contact</a>
+                    </li>
+                </ul>
+                <p id="copyright"> © COPYRIGHT 2022.ALL RIGHTS RESERVED</p>
+            </div>
+        </footer>
+</body>
+
+</html>
